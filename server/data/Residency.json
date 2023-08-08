@@ -245,7 +245,7 @@
     "address": "Street 18",
     "city": "Delhi",
     "country": "India",
-    "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1684045778/zdc3pb1d0kgfwxuk8hch.jpg",
+    "image": "https://images.pexels.com/photos/2187605/pexels-photo-2187605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "facilities": { "bedrooms": 5, "parkings": 2, "bathrooms": 3 },
     "userEmail": "ahmadrao925@gmail.com",
     "createdAt": { "$date": "2023-05-14T06:31:09.883Z" },
