@@ -6,7 +6,8 @@ import { getProperty } from "../../utils/api";
 import { PuffLoader } from "react-spinners";
 import { AiFillHeart, AiTwotoneCar } from "react-icons/ai";
 import { FaShower } from "react-icons/fa";
-import { MdMeetingRoom } from "react-icons/md";
+import { MdLocationPin, MdMeetingRoom } from "react-icons/md";
+import Map from "../../components/Map/Map";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -75,15 +76,31 @@ const Property = () => {
                 <span>{data?.facilities.bedrooms} Bedrooms</span>
               </div>
             </div>
+            {/* description */}
+            <span className="secondaryText" style={{ textAlign: "justify" }}>
+              {data?.description}
+            </span>
+            {/* address */}
+            <div className="flexStart" style={{ gap: "1rem" }}>
+              <MdLocationPin size={25} />
+              <span className="secondaryText">
+                {data?.address}
+                {data?.city}
+                {data?.country}
+              </span>
+            </div>
+            {/* booking button */}
+            <button className="button">Book your visit</button>
           </div>
 
-          {/* description */}
-          <span className="secondaryText" style={{ textAlign: "justify" }}>
-            {data?.description}
-          </span>
-
           {/* right */}
-          <div className="right">This is right side</div>
+          <div className="map">
+            <Map
+              address={data?.address}
+              city={data?.city}
+              country={data?.country}
+            />
+          </div>
         </div>
       </div>
     </div>

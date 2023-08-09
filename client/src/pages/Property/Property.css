@@ -32,10 +32,18 @@
   width: 100%;
 }
 .facilities {
-  gap: 0.5rem;
+  gap: 1 rem;
   font-size: 0.9rem;
   padding: 1rem;
 }
 .facility {
   gap: 0.5rem;
+}
+.property-details .button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.property-details .button:hover {
+  transform: scale(1.05);
 }
