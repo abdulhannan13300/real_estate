@@ -9,6 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "2.0.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/utils": "^1.2.1",
+    "@mantine/core": "^6.0.18",
+    "@mantine/dates": "^6.0.18",
+    "@mantine/form": "^6.0.18",
+    "@mantine/hooks": "^6.0.18",
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
     "esri-leaflet-geocoder": "2.3.3",

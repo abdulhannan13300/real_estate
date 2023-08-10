@@ -7,10 +7,11 @@ import {
   getAllBookings,
   toFav,
 } from "../controllers/userControllers.js";
+import jwtCheck from "../config/auth0Config.js";
 
 const router = express.Router();
 
-router.post("/register", createUser);
+router.post("/register", jwtCheck, createUser);
 router.post("/bookvisit/:id", bookVisit);
 router.get("/allbookings", getAllBookings);
 router.post("/removebooking/:id", cancelBooking);
