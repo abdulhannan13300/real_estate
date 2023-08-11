@@ -565,50 +565,50 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@^6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-6.0.18.tgz#4e27341163dc1596436d1acd4e3bc1af60f34283"
-  integrity sha512-i2Powv0sQYdW8vjJIC7xeo6XJDfGRpavCcQ8JpNVsCoC+db5RToEIsQc3jpgYBPY1/iWeUJuKPMMkQA5V+xMMA==
+"@mantine/core@^6.0.16":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-6.0.19.tgz#612413f0e8eb117e6a39068a625c6ccf2ae2ccdd"
+  integrity sha512-SvMZCOgCc315SIg6hkuLM0ZnBaAac4VFDHZ0BM5LIE4MPJUpe4QOLsg/5RGxOa5s7JRCtu/dawH3/9frvfDrhw==
   dependencies:
     "@floating-ui/react" "^0.19.1"
-    "@mantine/styles" "6.0.18"
-    "@mantine/utils" "6.0.18"
+    "@mantine/styles" "6.0.19"
+    "@mantine/utils" "6.0.19"
     "@radix-ui/react-scroll-area" "1.0.2"
     react-remove-scroll "^2.5.5"
     react-textarea-autosize "8.3.4"
 
-"@mantine/dates@^6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/dates/-/dates-6.0.18.tgz#f9386c48271125ad58c98f4b0edcbfea7f6b9029"
-  integrity sha512-QmqWCIkdz7Eg+61kz2H4wUFd32cuutjuUqtryH4Iab52E9NXdpCd31S/F4OjJtEzul9kAzQSZ/OSmsQQeL95Pw==
+"@mantine/dates@^6.0.16":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/dates/-/dates-6.0.19.tgz#bd21473be47239722af7929a537f36d0d89d9875"
+  integrity sha512-+5t3ljSHuvADJeq2PkxzyLsyWQGsCCg7evz6PDdGyxkVknn9wzBMM9UZZVyB22H5c7qieDi0yoO2gQIXJzhxQg==
   dependencies:
-    "@mantine/utils" "6.0.18"
+    "@mantine/utils" "6.0.19"
 
-"@mantine/form@^6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/form/-/form-6.0.18.tgz#e2d1a98436d1918d101604daf575945db29b2be9"
-  integrity sha512-f221RGdpH+ZPYd5zRwDNQcGTQVoADowknUZdSoZKMSmLHu77bl9xHINhKZjYS0FWYDxjsjHTV29JFumUuKw2yg==
+"@mantine/form@^6.0.16":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/form/-/form-6.0.19.tgz#3d97f08a45b1a8bc8840dbf77defd267abb20e39"
+  integrity sha512-5SFLZEzaBH7yKIDSDt1r9UiN4y7RkFvu+7J7CFPIQM+nTdXeGnugVFM8rASuZI7/FSYty/XoPY+Yymq3xDX+MQ==
   dependencies:
     fast-deep-equal "^3.1.3"
     klona "^2.0.5"
 
-"@mantine/hooks@^6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-6.0.18.tgz#720c6102b09d8c187d629c5e5bc7d9fe267d169e"
-  integrity sha512-i9RxEtC+7t5qG5Gn5SqTHkHxH9MSsGi9mQebt/GitX9+d9BVBwYLqutlDlHvb8bvDteuYphX5VWLSnJXT4Pivw==
+"@mantine/hooks@^6.0.16":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-6.0.19.tgz#39f61434304f687d3ba7bf0040c5adf380c7c4b3"
+  integrity sha512-YkmuB6kmoenU1PVuE8tLBA+6RJIY9hIsGyIQG1yuPAy6SLWNFT8g2T9YvI/psqsUbVIYGaNEXg8zq42xbxnD8Q==
 
-"@mantine/styles@6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-6.0.18.tgz#3df22381252fee71761fb51da7ed77de6bcd23ba"
-  integrity sha512-SNKcHkkmqLWUtE9lPucqOGNopvP4VsUtVRVtIUldRwvpzqoeuX1NJH6BwB8GPfVU0Wck/VeEhvGs+XzBe2xTRA==
+"@mantine/styles@6.0.19":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-6.0.19.tgz#7d9a6f2c2a9b345dfd9d12f8fd66af3976d67ab2"
+  integrity sha512-0tg3Dvv/kxCc1mbQVFhZaIhlSbSbV1F/3xG0NRlP2DF23mw9088o5KaIXGKM6XkXU6OEt/f99nDCUHBk2ixtUg==
   dependencies:
     clsx "1.1.1"
     csstype "3.0.9"
 
-"@mantine/utils@6.0.18":
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-6.0.18.tgz#da9ac8b13364277ad1a41b1ad5681fceebc89871"
-  integrity sha512-xvTnAUUHsdpsBm7OrcBueGEPdBwDm7wzUBsHweqSZMjT/HQOf4w4iirefNrFhMD2wNVetNL42kEngEBe6t63/w==
+"@mantine/utils@6.0.19":
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-6.0.19.tgz#0197fccc5649259787d5468228139f8815909803"
+  integrity sha512-duvtnaW1gDR2gnvUqnWhl6DMW7sN0HEWqS8Z/BbwaMi75U+Xp17Q72R9JtiIrxQbzsq+KvH9L9B/pxMVwbLirg==
 
 "@radix-ui/number@1.0.0":
   version "1.0.0"
@@ -705,10 +705,10 @@
   resolved "https://registry.yarnpkg.com/@react-leaflet/core/-/core-2.1.0.tgz#383acd31259d7c9ae8fb1b02d5e18fe613c2a13d"
   integrity sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==
 
-"@remix-run/router@1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.7.2.tgz#cba1cf0a04bc04cb66027c51fa600e9cbc388bc8"
-  integrity sha512-7Lcn7IqGMV+vizMPoEl5F0XDshcdDYtMI6uJLQdQz5CfZAwy3vvGKYSUk789qndt5dEC4HfSjviSYlSoHGL2+A==
+"@remix-run/router@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.5.0.tgz#57618e57942a5f0131374a9fdb0167e25a117fdc"
+  integrity sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==
 
 "@rollup/plugin-babel@^6.0.3":
   version "6.0.3"
@@ -1788,7 +1788,7 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-icons@^4.10.1:
+react-icons@^4.8.0:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.10.1.tgz#3f3b5eec1f63c1796f6a26174a1091ca6437a500"
   integrity sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==
@@ -1849,20 +1849,20 @@ react-remove-scroll@^2.5.5:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
-react-router-dom@^6.10.0:
-  version "6.14.2"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.14.2.tgz#88f520118b91aa60233bd08dbd3fdcaea3a68488"
-  integrity sha512-5pWX0jdKR48XFZBuJqHosX3AAHjRAzygouMTyimnBPOLdY3WjzUSKhus2FVMihUFWzeLebDgr4r8UeQFAct7Bg==
+react-router-dom@6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.10.0.tgz#090ddc5c84dc41b583ce08468c4007c84245f61f"
+  integrity sha512-E5dfxRPuXKJqzwSe/qGcqdwa18QiWC6f3H3cWXM24qj4N0/beCIf/CWTipop2xm7mR0RCS99NnaqPNjHtrAzCg==
   dependencies:
-    "@remix-run/router" "1.7.2"
-    react-router "6.14.2"
+    "@remix-run/router" "1.5.0"
+    react-router "6.10.0"
 
-react-router@6.14.2:
-  version "6.14.2"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.14.2.tgz#1f60994d8c369de7b8ba7a78d8f7ec23df76b300"
-  integrity sha512-09Zss2dE2z+T1D03IheqAFtK4UzQyX8nFPWx6jkwdYzGLXd5ie06A6ezS2fO6zJfEb/SpG6UocN2O1hfD+2urQ==
+react-router@6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.10.0.tgz#230f824fde9dd0270781b5cb497912de32c0a971"
+  integrity sha512-Nrg0BWpQqrC3ZFFkyewrflCud9dio9ME3ojHCF/WLsprJVzkq3q3UeEhMCAW1dobjeGbWgjNn/PVF6m46ANxXQ==
   dependencies:
-    "@remix-run/router" "1.7.2"
+    "@remix-run/router" "1.5.0"
 
 react-spinners@^0.13.8:
   version "0.13.8"

@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext";
 import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
+import { toast } from "react-toastify";
 
 const Layout = () => {
   //user details and auth
@@ -14,7 +15,7 @@ const Layout = () => {
 
   const { mutate } = useMutation({
     mutationKey: [user?.email],
-    mutationFn: () => createUser(user?.email),
+    mutationFn: (token) => createUser(user?.email, token),
   });
 
   useEffect(() => {
@@ -27,9 +28,9 @@ const Layout = () => {
       });
       localStorage.setItem("access_token", res);
       setUserDetails((prev) => ({ ...prev, token: res }));
+      // console.log(res);
 
-      console.log(res);
-      // mutate(res);
+      mutate(res);
     };
 
     // isAuthenticated && mutate();

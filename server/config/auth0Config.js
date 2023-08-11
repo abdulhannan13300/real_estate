@@ -2,7 +2,7 @@ import { auth } from "express-oauth2-jwt-bearer";
 
 const jwtCheck = auth({
   audience: "http://localhost:8000",
-  issuerBaseURL: "https://dev-g02lzidkp63hhxsq.us.auth0.com",
+  issuerBaseURL: "https://dev-g02lzidkp63hhxsq.us.auth0.com/",
   tokenSigningAlg: "RS256",
 });
 
