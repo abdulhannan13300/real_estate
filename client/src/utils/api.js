@@ -55,3 +55,45 @@ export const createUser = async (email, token) => {
     throw error;
   }
 };
+
+//Booking Visit
+export const bookVisit = async (date, propertyId, email, token) => {
+  try {
+    await api.post(
+      `/user/bookVisit/${propertyId}`,
+      {
+        email,
+        id: propertyId,
+        date: dayjs(date).format("DD/MM/YYYY"),
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    toast.error("Something went wrong in booking the visit");
+    throw error;
+  }
+};
+
+//Removing the booking
+export const removeBooking = async (id, email, token) => {
+  try {
+    await api.post(
+      `/user//removebooking/${id}`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    toast.error("Something went wrong in cancelling the booked visit");
+    throw error;
+  }
+};
