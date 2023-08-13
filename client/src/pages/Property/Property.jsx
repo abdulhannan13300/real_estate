@@ -11,9 +11,10 @@ import Map from "../../components/Map/Map";
 import useAuthCheck from "../../Hooks/useAuthCheck";
 import { useAuth0 } from "@auth0/auth0-react";
 import BookingModel from "../../components/BookingModel/BookingModel";
-import UserDetailCOntext from "../../context/UserDetailContext.js";
 import { Button } from "@mantine/core";
 import { toast } from "react-toastify";
+import Heart from "../../components/Heart/Heart";
+import UserDetailContext from "../../context/UserDetailContext.js";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -30,7 +31,7 @@ const Property = () => {
   const {
     userDetails: { token, bookings },
     setUserDetails,
-  } = useContext(UserDetailCOntext);
+  } = useContext(UserDetailContext);
 
   const { mutate: cancelBooking, isLoading: cancelling } = useMutation({
     mutationFn: () => removeBooking(id, user?.email, token),
@@ -69,7 +70,7 @@ const Property = () => {
       <div className="flexColStart paddings innerWidth property-container">
         {/* like button */}
         <div className="like">
-          <AiFillHeart size={24} color="white" />
+          <Heart id={id} />
         </div>
 
         {/* image */}

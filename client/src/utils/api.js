@@ -82,7 +82,7 @@ export const bookVisit = async (date, propertyId, email, token) => {
 export const removeBooking = async (id, email, token) => {
   try {
     await api.post(
-      `/user//removebooking/${id}`,
+      `/user/removebooking/${id}`,
       {
         email,
       },
@@ -94,6 +94,25 @@ export const removeBooking = async (id, email, token) => {
     );
   } catch (error) {
     toast.error("Something went wrong in cancelling the booked visit");
+    throw error;
+  }
+};
+
+//Add to the Favourite List
+export const toFav = async (id, email, token) => {
+  try {
+    await api.post(
+      `/user/tofav/${id}`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
     throw error;
   }
 };
