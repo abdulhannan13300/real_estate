@@ -7,46 +7,48 @@ import UserDetailContext from "../../context/UserDetailContext";
 import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
 import { toast } from "react-toastify";
+import useFavourites from "../../Hooks/useFavourites";
 
 const Layout = () => {
-  //user details and auth
-  const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
-  const { setUserDetails } = useContext(UserDetailContext);
+   useFavourites();
+   //user details and auth
+   const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
+   const { setUserDetails } = useContext(UserDetailContext);
 
-  const { mutate } = useMutation({
-    mutationKey: [user?.email],
-    mutationFn: (token) => createUser(user?.email, token),
-  });
+   const { mutate } = useMutation({
+      mutationKey: [user?.email],
+      mutationFn: (token) => createUser(user?.email, token),
+   });
 
-  useEffect(() => {
-    const getTokenAndRegister = async () => {
-      const res = await getAccessTokenWithPopup({
-        authorizationParams: {
-          audience: "http://localhost:8000",
-          scope: "openid profile email",
-        },
-      });
-      localStorage.setItem("access_token", res);
-      setUserDetails((prev) => ({ ...prev, token: res }));
-      // console.log(res);
+   useEffect(() => {
+      const getTokenAndRegister = async () => {
+         const res = await getAccessTokenWithPopup({
+            authorizationParams: {
+               audience: "http://localhost:8000",
+               scope: "openid profile email",
+            },
+         });
+         localStorage.setItem("access_token", res);
+         setUserDetails((prev) => ({ ...prev, token: res }));
+         // console.log(res);
 
-      mutate(res);
-    };
+         mutate(res);
+      };
 
-    // isAuthenticated && mutate();
-    isAuthenticated && getTokenAndRegister();
-  }, [isAuthenticated]);
-  //ends user details and auth
+      // isAuthenticated && mutate();
+      isAuthenticated && getTokenAndRegister();
+   }, [isAuthenticated]);
+   //ends user details and auth
 
-  return (
-    <>
-      <div style={{ background: "var(--black)", overflow: "hidden" }}>
-        <Header />
-        <Outlet />
-      </div>
-      <Footer />
-    </>
-  );
+   return (
+      <>
+         <div style={{ background: "var(--black)", overflow: "hidden" }}>
+            <Header />
+            <Outlet />
+         </div>
+         <Footer />
+      </>
+   );
 };
 
 export default Layout;
