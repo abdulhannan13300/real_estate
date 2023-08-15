@@ -6,49 +6,51 @@ import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext";
 import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
-import { toast } from "react-toastify";
 import useFavourites from "../../Hooks/useFavourites";
+import useBookings from "../../Hooks/useBookings";
 
 const Layout = () => {
-   useFavourites();
-   //user details and auth
-   const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
-   const { setUserDetails } = useContext(UserDetailContext);
+  useFavourites();
+  useBookings();
 
-   const { mutate } = useMutation({
-      mutationKey: [user?.email],
-      mutationFn: (token) => createUser(user?.email, token),
-   });
+  //user details and auth
+  const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
+  const { setUserDetails } = useContext(UserDetailContext);
 
-   useEffect(() => {
-      const getTokenAndRegister = async () => {
-         const res = await getAccessTokenWithPopup({
-            authorizationParams: {
-               audience: "http://localhost:8000",
-               scope: "openid profile email",
-            },
-         });
-         localStorage.setItem("access_token", res);
-         setUserDetails((prev) => ({ ...prev, token: res }));
-         // console.log(res);
+  const { mutate } = useMutation({
+    mutationKey: [user?.email],
+    mutationFn: (token) => createUser(user?.email, token),
+  });
 
-         mutate(res);
-      };
+  useEffect(() => {
+    const getTokenAndRegister = async () => {
+      const res = await getAccessTokenWithPopup({
+        authorizationParams: {
+          audience: "http://localhost:8000",
+          scope: "openid profile email",
+        },
+      });
+      localStorage.setItem("access_token", res);
+      setUserDetails((prev) => ({ ...prev, token: res }));
+      // console.log(res);
 
-      // isAuthenticated && mutate();
-      isAuthenticated && getTokenAndRegister();
-   }, [isAuthenticated]);
-   //ends user details and auth
+      mutate(res);
+    };
 
-   return (
-      <>
-         <div style={{ background: "var(--black)", overflow: "hidden" }}>
-            <Header />
-            <Outlet />
-         </div>
-         <Footer />
-      </>
-   );
+    // isAuthenticated && mutate();
+    isAuthenticated && getTokenAndRegister();
+  }, [isAuthenticated]);
+  //ends user details and auth
+
+  return (
+    <>
+      <div style={{ background: "var(--black)", overflow: "hidden" }}>
+        <Header />
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Layout;
