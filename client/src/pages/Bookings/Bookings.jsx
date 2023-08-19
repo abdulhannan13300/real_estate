@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import "./Properties.css";
+import "../Properties/Properties.css";
 import useProperties from "../../Hooks/useProperties";
 import { PuffLoader } from "react-spinners";
 import PropertyCard from "../../components/PropertyCard/PropertyCard";
 import { property } from "lodash";
+import UserDetailContext from "../../context/UserDetailContext";
 
-const Properties = () => {
+const Bookings = () => {
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");
+  const {
+    userDetails: { bookings },
+  } = useContext(UserDetailContext);
+
   if (isError) {
     return (
       <div className="wrapper">
@@ -39,6 +44,11 @@ const Properties = () => {
             // data.map((card, i) => (<PropertyCard card={card} key={i} />))
             data
               .filter(
+                (
+                  property // to render only booked property using the bookings array
+                ) => bookings.map((booking) => booking.id).includes(property.id)
+              )
+              .filter(
                 (property) =>
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
                   property.city.toLowerCase().includes(filter.toLowerCase()) ||
@@ -54,4 +64,4 @@ const Properties = () => {
   );
 };
 
-export default Properties;
+export default Bookings;
