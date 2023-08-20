@@ -11,6 +11,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import Property from "./pages/Property/Property";
 import UserDetailContext from "./context/UserDetailContext";
 import Bookings from "./pages/Bookings/Bookings";
+import Favourites from "./pages/Favourites/Favourites";
 
 function App() {
   const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ function App() {
                   <Route path=":propertyId" element={<Property />} />
                 </Route>
                 <Route path="/bookings" element={<Bookings />} />
+                <Route path="/favourites" element={<Favourites />} />
               </Route>
             </Routes>
           </Suspense>
