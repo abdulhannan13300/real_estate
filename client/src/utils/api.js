@@ -17,7 +17,7 @@ export const getAllProperties = async () => {
       }
       return response.data;
    } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong, while getting all properties");
       throw error;
    }
 };
@@ -33,7 +33,7 @@ export const getProperty = async (id) => {
       }
       return response.data;
    } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong, while getting a property");
       throw error;
    }
 };
@@ -51,7 +51,7 @@ export const createUser = async (email, token) => {
          }
       );
    } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong, while registering a user");
       throw error;
    }
 };
